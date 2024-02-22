@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
         </div>
 
         <div data-role="content">
-            <form action="/api/products/" method="POST" data-ajax="false">
+            <form action="/" method="POST">
                 <label for="txt_codigo_barras">Código de barras:</label>
                 <input type="text" name="barcode" id="txt_codigo_barras" placeholder="Código de barras" value="">
 
@@ -77,8 +77,8 @@
                             <p>Existencias: <%= product.stock %></p>
                             <p>Caducidad: <%= product.expiredDate %></p>
                             <p>Estatus: <%= product.status %></p>
-                            <a href="/api/products/<%= product.barcode %>" class="ui-btn">Editar</a>
-                            <a href="/api/products/delete/<%= product.barcode %>" class="ui-btn">Eliminar</a>
+                            <a href="/<%= product.barcode %>" class="ui-btn">Editar</a>
+                            <a href="/delete/<%= product.barcode %>" class="ui-btn">Eliminar</a>
                         </div>
                     </div>
                 <% }) %>
