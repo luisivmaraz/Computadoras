@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <title>Abarrotes Ti</title>
+    <title>soporte de computadoras xd</title>
 </head>
 <body>
     <div data-role="page">
         <div data-role="header" data-position="fixed">
-            <h1>Abarrotes TI</h1>
+            <h1>Computadoras en manetnimiento</h1>
             <div data-role="navbar">
                 <ul>
                     <li><a href="#" class="ui-btn-active">Inicio</a></li>
@@ -77,6 +77,7 @@
                             <p>Existencias: <%= product.stock %></p>
                             <p>Caducidad: <%= product.expiredDate %></p>
                             <p>Estatus: <%= product.status %></p>
+                            <a href="#" class="ui-btn ui-btn-a ui-corner-all" data-rel="back">Cancelar</a>
                             <a href="/<%= product.barcode %>" class="ui-btn">Editar</a>
                             <a href="/delete/<%= product.barcode %>" class="ui-btn">Eliminar</a>
                         </div>
