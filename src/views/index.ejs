@@ -9,45 +9,47 @@
     <title>LuisTec</title>
 </head>
 <body>
-    <div data-role="page">
+    <div data-role="page" style="color: aqua;">
         <div data-role="header">
             <h1>LuisTec Soporte Tecnico</h1>
             <div data-role="navbar">
-                <ul>
+                <ul style="color: rgb(121, 181, 253);">
                     <li><a href="#" class="ui-btn-active">En mantenimiento</a></li>
                     <li><a href="/agregar">Registrar equipos</a></li>
                 </ul>
+              
             </div>
+            
         </div>
-
         <div data-role="content">
 
             <ul data-role="listview" data-inset="true">
                 <% products.forEach((product) => { %>
-                    <li>
-                        <a href="#collapsible<%= product.barcode %>" data-rel="popup">
-                            <h2>Folio: <%= product.barcode %></h2>
-                            <p>Problema: <%= product.description %></p>
-                            <p>Marca: <%= product.brand %></p>
+                    <li style="background-color: aqua;"">
+                        <a href="#collapsible<%= product.barcode %>" data-rel="popup" style="background-color: rgb(121, 181, 253);">
+                            <img src = "https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif">
+                            <h2 style="color: white;">Folio: <%= product.barcode %></h2>
+                            <p style="color: white;">Problema: <%= product.description %></p>
+                            <p style="color: white;">Marca: <%= product.brand %></p>
                         </a>
                     </li>
 
 
 
                     <div data-role="popup" id="collapsible<%= product.barcode %>" data-overlay-theme="a" data-theme="a" data-dismissible="false" style="max-width:400px;">
-                        <div data-role="header" data-theme="a">
-                            <h1>Detalles</h1>
+                        <div data-role="header" data-theme="a" style="background-color: darkblue;" >
+                            <h1  style="color: white;">Detalles</h1>
                         </div>
-                        <div data-role="content" data-theme="a">
-                            <h3>Folio: <%= product.barcode %></h3>
-                            <p>Cliente: <%= product.client %></p>
-                            <p>Marca: <%= product.brand %></p>
-                            <p>Modelo: <%= product.model %></p>
-                            <p>Problema: <%= product.description %></p>
-                            <p>Costo reparacion: $<%= product.cost %></p>
-                            <a href="/<%= product.barcode %>" class="ui-btn">Editar</a>
-                            <a href="/delete/<%= product.barcode %>" class="ui-shadow ui-btn ui-corner-all 
-                                ui-corner-all" style="color: rgb(254, 0, 0);">Eliminar</a>
+                        <div data-role="content" data-theme="a" style="background-color: darkblue;">
+
+                            <h3 style="color: rgb(255, 255, 255);">Folio: <%= product.barcode %></h3>
+                            <p style="color: white;">Cliente: <%= product.client %></p>
+                            <p style="color: white;">Marca: <%= product.brand %></p>
+                            <p style="color: white;">Modelo: <%= product.model %></p>
+                            <p style="color: white;">Problema: <%= product.description %></p>
+                            <p style="color: white;">Costo reparacion: $<%= product.cost %></p>
+                            <a href="/<%= product.barcode %>" class="ui-shadow ui-btn ui-corner-all">Editar</a>
+                            <a href="/delete/<%= product.barcode %>" class="ui-shadow ui-btn ui-corner-all" style="color: rgb(254, 0, 0);">Eliminar</a>
                                 <a href="#" class="ui-btn ui-btn-a ui-corner-all" data-rel="back">Cancelar</a>   
                         </div>
                     </div>
@@ -61,3 +63,4 @@
     </div>
 </body>
 </html>
+

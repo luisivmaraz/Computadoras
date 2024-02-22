@@ -20,14 +20,24 @@
             </div>
         </div>
 
-        <div data-role="content">
+        <div data-role="content" style="background-color: rgb(121, 181, 253);;">
             <form action="/" method="POST">
+                <label for="file-1">Imagen del equipo</label>
+                 <input type="file" data-clear-btn="false" name="file-1" id="file-1" value="">
+                  
+                
+
+
+                <a href="#popupPhotoPortrait" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade">Ver imagen</a>
+                <div data-role="popup" id="popupPhotoPortrait" class="photopopup" data-overlay-theme="a" data-corners="false" data-tolerance="30,15">
+                     <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="https://i.ibb.co/WFQG1xX/wwwww.jpg" alt="Photo portrait">
+                 </div>
                 <label for="txt_codigo_barras">Folio:</label>
                 <input type="text" name="barcode" id="txt_codigo_barras" placeholder="Folio" value="">
 
 
                 <label for="txt_client">Nombre del cliente:</label>
-                <input type="text" name="client" id="txt_client" placeholder="Nombre del cliente" value="">
+                <input type="text" name="client" id="txt_client" placeholder="Nombre del cliente" value="" >
 
 
                 <label for="txt_brand">Marca:</label>
@@ -42,7 +52,8 @@
 
                 <label for="txt_cost">Costo de la reparacion:</label>
                 <input type="text" name="cost" id="txt_cost" placeholder="Costo de la reparacion" value="">
-                <button type="submit" class="ui-btn ui-btn-b ui-corner-all">Guardar</button>
+                
+                <button type="submit" class="ui-btn ui-btn-b ui-corner-all" style="background-color: yellowgreen;">Guardar</button>
             </form>
 
 
@@ -52,3 +63,15 @@
     </div>
 </body>
 </html>
+
+
+<script>
+    $( document ).on( "pagecreate", function() {
+    $( ".photopopup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".photopopup img" ).css( "max-height", maxHeight );
+        }
+    });
+});
+</script>
