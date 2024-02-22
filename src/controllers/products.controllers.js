@@ -70,3 +70,8 @@ export const deleteOne = (req, res) => {
             status: "Server unavailable"
         }));
 };
+
+
+export const agregar =(req,res) =>{
+    res.render("../src/views/agregar.ejs")
+}

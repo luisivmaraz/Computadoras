@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <title>Abarrotes TI</title>
+    <title>LuisTec</title>
 
     <style>
         /* Estilo personalizado para el encabezado */
@@ -25,56 +25,37 @@
 <body>
     <div data-role="page">
         <div data-role="header" data-position="fixed" class="custom-header">
-            <h1>Abarrotes TI</h1>
+            <h1>LuisTec Soporte Tecnico</h1>
             <div data-role="navbar">
-                <ul>
-                    <li><a href="#" class="ui-btn-active">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                </ul>
             </div>
         </div>
 
         <div data-role="content">
+
+
             <form action="/<%= product.barcode %>" method="POST">
-                
-                <label for="txt_codigo_barras" class="custom-form-label">Codigo de barras:</label>
-                <input type="text" name="barcode" id="txt_codigo_barras" placeholder="Código de barras" 
-                value="<%= product.barcode %>">
-                
-                <label for="txt_description" class="custom-form-label">Descripción:</label>
+                <div data-role="content" data-theme="a" > 
+                <h3>Folio: <%= product.barcode %></h3>
+                <p>Cliente: <%= product.client %></p>
+                <p>Marca: <%= product.brand %></p>
+                <p>Modelo: <%= product.model %></p>
+                <p>Problema: <%= product.description %></p>
+                <p>Costo reparacion: <%= product.cost %></p>
+                </div>
+
+                <label for="txt_description" class="custom-form-label">Problema:</label>
                 <input type="text" name="description" id="txt_description" placeholder="Descripción" 
                 value="<%= product.description %>">
 
-                <!-- Otros campos del formulario con estilos personalizados -->
-
-                <label for="txt_price" class="custom-form-label">Precio:</label>
-                <input type="text" name="price" id="txt_price" placeholder="Precio" value="<%= product.price %>">
-
-                <label for="txt_cost" class="custom-form-label">Costo:</label>
+                <label for="txt_cost" class="custom-form-label">Costo de reparacion:</label>
                 <input type="text" name="cost" id="txt_cost" placeholder="Costo" value="<%= product.cost %>">
 
-                <label for="txt_stock" class="custom-form-label">Stock:</label>
-                <input type="text" name="stock" id="txt_stock" placeholder="Stock" value="<%= product.stock %>">
-
-                <label for="txt_expiredDate" class="custom-form-label">Caducidad:</label>
-                <input type="text" name="expiredDate" id="txt_expiredDate" placeholder="Caducidad" value="<%= product.expiredDate %>">
-
-                <!-- Fin de campos adicionales -->
-
-                <label for="flip-2" class="custom-form-label">Activo</label>
-                <select name="status" id="flip-2" data-role="slider">
-                    <option value="0" <%= product.status=0 ? "selected" : "" %> >No</option>
-                    <option value="1" <%= product.status=1 ? "selected" : "" %> >Si</option>
-                </select>
-
-                <label for="submit-6" class="custom-form-label">Enviar</label>
+                <label for="submit-6" class="custom-form-label">Acciones</label>
                 <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all 
-                    ui-mini" style="color: rgb(0, 0, 0);">Guardar</button>
-                <a href="delete/<%= product.barcode %>" class="ui-btn ui-btn-b ui-corner-all ui-mini">Eliminar</a>
+                        " style="color: rgb(0, 0, 0);">Guardar</button>
+                <a href="delete/<%= product.barcode %>" class="ui-shadow ui-btn ui-corner-all" style="color: rgb(254, 0, 0);">Eliminar</a>
 
-                <!-- Botón de Cancelar -->
-                <a href="#" class="ui-btn ui-btn-a ui-corner-all" data-rel="back">Cancelar</a>
+                <a href="/" class="ui-btn ui-btn-a ui-corner-all ">Cancelar</a>
             </form>
         </div>
 

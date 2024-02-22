@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>LuisTec </title>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>LuisTec Soporte Tecnico</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="/" >En mantenimiento</a></li>
+                    <li><a href="#" class="ui-btn-active">Registrar equipos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="content">
+            <form action="/" method="POST">
+                <label for="txt_codigo_barras">Folio:</label>
+                <input type="text" name="barcode" id="txt_codigo_barras" placeholder="Folio" value="">
+
+
+                <label for="txt_client">Nombre del cliente:</label>
+                <input type="text" name="client" id="txt_client" placeholder="Nombre del cliente" value="">
+
+
+                <label for="txt_brand">Marca:</label>
+                <input type="text" name="brand" id="txt_brand" placeholder="Marca" value="">
+
+                <label for="txt_model">Modelo:</label>
+                <input type="text" name="model" id="txt_model" placeholder="Modelo" value="">
+
+                <label for="txt_description">Descripción del problema:</label>
+                <input type="text" name="description" id="txt_description" placeholder="Descripción" value="">
+
+
+                <label for="txt_cost">Costo de la reparacion:</label>
+                <input type="text" name="cost" id="txt_cost" placeholder="Costo de la reparacion" value="">
+                <button type="submit" class="ui-btn ui-btn-b ui-corner-all">Guardar</button>
+            </form>
+
+
+        <div data-role="footer">
+            <h5>Luisivmaraz 03</h5>
+        </div>
+    </div>
+</body>
+</html>

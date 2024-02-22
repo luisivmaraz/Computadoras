@@ -5,13 +5,11 @@ const productSchema = new Schema({
         unique: true,
         required: true
        },
-       description: String,
+       client: String,
        brand: String,
-       price: Number,
+       model: String,
+       description: String,
        cost: Number,
-       stock: Number,
-       expiredDate: String,
-       status:Number,
     },{
         versionKey: false,// para que no se inserte en los documentos
         timestamps: true
