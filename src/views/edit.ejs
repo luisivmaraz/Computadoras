@@ -8,6 +8,9 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <title>LuisTec</title>
 </head>
+
+                
+
 <body>
   
     <div data-role="page" style="background-color: rgb(121, 181, 253);">
@@ -22,12 +25,13 @@
 
             <form action="/<%= product.barcode %>" method="POST" style="background-color: rgb(121, 181, 253);">
                 <div data-role="content" data-theme="a" style="background-color: rgb(23, 176, 48);" > 
-                <h3 style="color: white;">Folio: <%= product.barcode %></h3>
-                <p style="color: white;">Cliente: <%= product.client %></p>
-                <p style="color: white;">Marca: <%= product.brand %></p>
-                <p style="color: white;">Modelo: <%= product.model %></p>
-                <p style="color: white;">Problema: <%= product.description %></p>
-                <p style="color: white;">Costo reparacion: <%= product.cost %></p>
+                <h2 style="color: white; text-align: center;" >*** Informacion General ***</h2>
+                <h3 style="color: white; text-align: center;" >Folio: <%= product.barcode %></h3>
+                <p style="color: white; text-align: center;">Cliente: <%= product.client %></p>
+                <p style="color: white; text-align: center;">Marca: <%= product.brand %></p>
+                <p style="color: white; text-align: center;">Modelo: <%= product.model %></p>
+                <p style="color: white; text-align: center;">Problema: <%= product.description %></p>
+                <p style="color: white; text-align: center;">Costo reparacion: <%= product.cost %></p>
                 </div>
 
                 <label for="txt_description" class="custom-form-label"> </label>
@@ -53,3 +57,5 @@
     </div>
 </body>
 </html>
+
+
